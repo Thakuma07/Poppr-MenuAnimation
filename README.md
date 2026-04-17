@@ -2,6 +2,8 @@
 
 A beautiful animated menu using standard HTML/CSS and GSAP with Split-Type for text animations, served through a modern Vite workflow.
 
+<img width="1920" height="1080" alt="Screenshot 2026-04-17 154107" src="https://github.com/user-attachments/assets/8e7f5bab-a837-4ac4-9dfd-9171c9f00531" />
+
 ## Features
 - **GSAP Animations**: Smooth transitions for opening and closing the menu using SVG paths.
 - **Split-Type**: Text is broken down and animated per-character for a dynamic effect.
