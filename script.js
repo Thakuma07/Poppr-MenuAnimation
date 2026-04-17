@@ -1,7 +1,5 @@
 import gsap from "gsap";
-import SplitText from "gsap/SplitText";
-
-gsap.registerPlugin(SplitText);
+import SplitType from "split-type";
 
 const navToggle = document.querySelector(".nav-toggle");
 const navToggleMenu = document.querySelector(".nav-toggle-menu");
@@ -30,9 +28,9 @@ gsap.set(menuBg, { attr: { d: OPEN_HIDDEN } });
 
 const splits = [];
 menuLinks.forEach((link) => {
-  const split = new SplitText(link, { type: "chars", charsClass: "char" });
+  const split = new SplitType(link, { types: "chars", charClass: "char" });
   splits.push(split);
-  gsap.set(split.chars, { opacity: 0, x: "750%" });
+  gsap.set(split.chars, { opacity: 0, x: "150%" });
 });
 
 gsap.set(menuInfoItems, { opacity: 0, y: 100 });
@@ -125,7 +123,7 @@ const closeMenu = () => {
         menu.classList.remove("is-open");
         gsap.set(menuBg, { attr: { d: OPEN_HIDDEN } });
         splits.forEach((split) => {
-            gsap.set(split.chars, { opacity: 0, x: "750%" });
+            gsap.set(split.chars, { opacity: 0, x: "150%" });
         });
         gsap.set(menuLinks, { opacity: 1 });
         gsap.set(menuInfoItems, { opacity: 0, y: 100 });
